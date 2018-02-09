@@ -1,3 +1,6 @@
-console.log("oi");
-console.log("bye");
-console.log("mais uma mudança");
+var router = express();
+
+//Caminho para receber get 
+router.get('/webhook', function(req, res){
+    res.send('ok')
+});
