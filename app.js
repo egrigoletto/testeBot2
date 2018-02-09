@@ -1,3 +1,5 @@
+var express = require('express');
+
 var router = express();
 
 //Caminho para receber get 
