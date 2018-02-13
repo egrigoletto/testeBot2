@@ -2,9 +2,6 @@ var express = require('express');
 
 var router = express();
 
-router.set('port', (process.env.PORT || 3000))
-router.use(express.static(__dirname + '/public'))
-
 //Caminho para receber get 
 router.get('/webhook', function(req, res){
     //tenta fazer um pacto com o fb pelo subscribe da requisição, se esse subscribe tiver a senha que eu setei no fb, ok
@@ -21,10 +18,3 @@ router.get('/webhook', function(req, res){
          res.sendStatus(403);
     }
 });
-
-//------------------
-//Checa se o app está rodando na porta que escolhi
-//TODO - testar sem a porta e ver se sai por padrão
-router.listen(router.get('port'), function() {
-  console.log("Node app está rodando em localhost(do servidor):" + router.get('port'))
-})
