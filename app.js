@@ -15,6 +15,6 @@ router.get('/webhook', function(req, res){
     //outra aplicação tentando acessar o webhook
     {
         console.log('validação falhou!');
-         res.sendStatus(403);
+         res.sendStatus(404);
     }
 });
