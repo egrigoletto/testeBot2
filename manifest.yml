@@ -1,5 +1,5 @@
 applications:
 - path: .
-  name: testebot3
+  name: testebot4
   random-route: true
   memory: 64M
